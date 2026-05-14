@@ -6,12 +6,11 @@ import { IconSymbol } from './ui/icon-symbol';
 export function RecipeCard({ recipe, showSaveButton = false }: { recipe: Recipe, showSaveButton?: boolean }) {
   return (
     <View style={styles.container}>
-      {/* This allows clicking the card to go to the detail page you created */}
+      {/* This allows clicking the card to go to the detail page */}
       <Link href={{ pathname: '/recipe/[id]', params: { id: recipe.id } }} asChild>
         <Pressable style={styles.card}>
           <Text style={styles.title}>{recipe.title}</Text>
           <Text style={styles.category}>{recipe.category}</Text>
-          {/* PERSON 3: Add Image and better styling here */}
         </Pressable>
       </Link>
 
